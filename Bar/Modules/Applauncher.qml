@@ -143,7 +143,7 @@ PanelWithOverlay {
                     return;
 
                 var modelData = filteredApps[selectedIndex];
-                const termEmu = Quickshell.env("TERMINAL") || Quickshell.env("TERM_PROGRAM") || none;
+                const termEmu = Quickshell.env("TERMINAL") || Quickshell.env("TERM_PROGRAM") || "";
 
                 if (modelData.isCalculator) {
                     Qt.callLater(function () {
