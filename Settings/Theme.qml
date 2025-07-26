@@ -97,8 +97,8 @@ Singleton {
     property color outline: themeData.outline
 
     // Shadows & Overlays
-    property color shadow: applyOpacity(themeData.shadow, "B3")
-    property color overlay: applyOpacity(themeData.overlay, "66")
+    property color shadow: themeData.shadow
+    property color overlay: themeData.overlay
 
     // Font Properties
     property string fontFamily: "Roboto"         // Family for all text

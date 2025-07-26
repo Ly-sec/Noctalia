@@ -67,9 +67,9 @@ Scope {
                     process.index = 0;
                 }
                 for (let i = 0; i < data.length; i += 1) {
-                    newValues[i + process.index] = Math.min(data.charCodeAt(i), 128) / 128;
+                    newValues[process.index] = Math.min(data.charCodeAt(i), 128) / 128;
+                    process.index = (process.index+1) % count;
                 }
-                process.index += data.length;
                 values = newValues;
             }
         }

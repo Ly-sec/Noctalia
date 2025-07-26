@@ -159,6 +159,7 @@ Scope {
                         offsetX: -39
                         offsetY: 0
                         anchors.top: parent.top
+                        visible: Settings.settings.showCorners
                     }
                 }
 
@@ -185,6 +186,7 @@ Scope {
                         offsetX: 39
                         offsetY: 0
                         anchors.top: parent.top
+                        visible: Settings.settings.showCorners
                     }
                 }
 
@@ -210,6 +212,7 @@ Scope {
                         offsetX: -39
                         offsetY: 0
                         anchors.top: parent.top
+                        visible: Settings.settings.showCorners
                     }
                 }
 
@@ -235,6 +238,7 @@ Scope {
                         offsetX: 39
                         offsetY: 0
                         anchors.top: parent.top
+                        visible: Settings.settings.showCorners
                     }
                 }
             }

@@ -7,7 +7,7 @@ import qs.Settings
 Rectangle {
     id: profileSettingsCard
     Layout.fillWidth: true
-    Layout.preferredHeight: 540
+    Layout.preferredHeight: 580
     color: Theme.surface
     radius: 18
     border.color: "transparent"
@@ -247,6 +247,61 @@ Rectangle {
                     cursorShape: Qt.PointingHandCursor
                     onClicked: {
                         Settings.settings.showSystemInfoInBar = !Settings.settings.showSystemInfoInBar
+                    }
+                }
+            }
+        }
+
+        // Show Corners In Bar Setting
+        RowLayout {
+            spacing: 8
+            Layout.fillWidth: true
+            Layout.topMargin: 8
+
+            Text {
+                text: "Show Corners"
+                font.family: Theme.fontFamily
+                font.pixelSize: 13
+                font.bold: true
+                color: Theme.textPrimary
+                Layout.alignment: Qt.AlignVCenter
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
+            // Custom Material 3 Switch
+            Rectangle {
+                id: customSwitch4
+                width: 52
+                height: 32
+                radius: 16
+                color: Settings.settings.showCorners ? Theme.accentPrimary : Theme.surfaceVariant
+                border.color: Settings.settings.showCorners ? Theme.accentPrimary : Theme.outline
+                border.width: 2
+
+                Rectangle {
+                    id: thumb4
+                    width: 28
+                    height: 28
+                    radius: 14
+                    color: Theme.surface
+                    border.color: Theme.outline
+                    border.width: 1
+                    y: 2
+                    x: Settings.settings.showCorners ? customSwitch4.width - width - 2 : 2
+
+                    Behavior on x {
+                        NumberAnimation { duration: 200; easing.type: Easing.OutCubic }
+                    }
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: Qt.PointingHandCursor
+                    onClicked: {
+                        Settings.settings.showCorners = !Settings.settings.showCorners
                     }
                 }
             }

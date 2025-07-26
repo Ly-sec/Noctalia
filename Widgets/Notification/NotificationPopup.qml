@@ -32,6 +32,7 @@ PanelWindow {
             appName: notification.appName || "Notification",
             summary: notification.summary || "",
             body: notification.body || "",
+            urgency: notification.urgency || 0,
             rawNotification: notification,
             appeared: false,
             dismissed: false
@@ -84,6 +85,8 @@ PanelWindow {
                 width: parent.width
                 color: Theme.backgroundPrimary
                 radius: 20
+                border.color: model.urgency == 2 ? Theme.warning : Theme.outline
+                border.width: 1
 
                 property bool appeared: model.appeared
                 property bool dismissed: model.dismissed

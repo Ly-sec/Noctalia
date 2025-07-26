@@ -128,7 +128,6 @@ PanelWindow {
                 text: ToplevelManager?.activeToplevel?.title && ToplevelManager?.activeToplevel?.title.length > 60 ? ToplevelManager?.activeToplevel?.title.substring(0, 60) + "..." : ToplevelManager?.activeToplevel?.title || ""
                 font.pixelSize: 12
                 color: Theme.textSecondary
-                elide: Text.ElideRight
                 anchors.left: icon.right
                 anchors.leftMargin: Settings.settings.showActiveWindowIcon ? 4 : 6
                 anchors.right: parent.right

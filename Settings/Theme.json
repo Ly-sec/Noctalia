@@ -23,6 +23,6 @@
   "onAccent": "#0E0F10",
   "outline": "#565758",
   
-  "shadow": "#0E0F10",
-  "overlay": "#0E0F10"
+  "shadow": "#B30E0F10",
+  "overlay": "#660E0F10"
 }

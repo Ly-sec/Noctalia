@@ -49,10 +49,10 @@ Singleton {
                             isFocused: ws.is_focused === true,
                             isActive: ws.is_active === true,
                             isUrgent: ws.is_urgent === true,
-                            activeWindowId: ws.active_window_id
+                            isOccupied: ws.active_window_id ? true : false
                         });
                     }
-                    
+
                     workspacesList.sort((a, b) => {
                         if (a.output !== b.output) {
                             return a.output.localeCompare(b.output);

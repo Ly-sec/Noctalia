@@ -124,7 +124,8 @@ Singleton {
                 output: ws.output || "",
                 isFocused: ws.isFocused === true,
                 isActive: ws.isActive === true,
-                isUrgent: ws.isUrgent === true
+                isUrgent: ws.isUrgent === true,
+                isOccupied: ws.isOccupied === true,
             });
         }
         

@@ -44,6 +44,7 @@ Singleton {
             property string videoPath: "~/Videos/"
             property bool showActiveWindowIcon: false
             property bool showSystemInfoInBar: false
+            property bool showCorners: false
             property bool showMediaInBar: false
             property bool useSWWW: false
             property bool randomWallpaper: false

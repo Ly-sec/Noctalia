@@ -51,8 +51,8 @@ PopupWindow {
     Rectangle {
         id: bg
         anchors.fill: parent
-        color: Theme.backgroundElevated || "#222"
-        border.color: Theme.border || "#444"
+        color: Theme.surfaceVariant || "#222"
+        border.color: Theme.outline || "#444"
         border.width: 1
         radius: 12
         z: 0
@@ -84,7 +84,7 @@ PopupWindow {
                 anchors.centerIn: parent
                 width: parent.width - 20
                 height: 1
-                color: Qt.darker(Theme.backgroundElevated || "#222", 1.4)
+                color: Qt.darker(Theme.surfaceVariant || "#222", 1.4)
                 visible: modelData?.isSeparator ?? false
             }
 
