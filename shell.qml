@@ -153,14 +153,14 @@ Scope {
     // --- NEW: Keep volume property in sync with actual Pipewire audio sink volume ---
 
     Connections {
-        target: defaultAudioSink.audio
-        onVolumeChanged: {
+        target: defaultAudioSink ? defaultAudioSink.audio : null
+        function onVolumeChanged() {
             if (defaultAudioSink.audio && !defaultAudioSink.audio.muted) {
                 volume = Math.round(defaultAudioSink.audio.volume * 100);
                 console.log("Volume changed externally to:", volume);
             }
         }
-        onMutedChanged: {
+        function onMutedChanged() {
             if (defaultAudioSink.audio) {
                 if (defaultAudioSink.audio.muted) {
                     volume = 0;
