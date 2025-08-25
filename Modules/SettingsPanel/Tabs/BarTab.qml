@@ -127,6 +127,15 @@ ColumnLayout {
                        Settings.data.bar.alwaysShowBatteryPercentage = checked
                      }
         }
+        
+        NToggle {
+          label: "Show Workspace Names"
+          description: "Show the workspace names on the workspace indicators"
+          checked: Settings.data.bar.showWorkspaceNames
+          onToggled: checked => {
+                       Settings.data.bar.showWorkspaceNames = checked
+                     }
+        }
 
         NDivider {
           Layout.fillWidth: true

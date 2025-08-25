@@ -161,6 +161,21 @@ Item {
         Rectangle {
           id: workspacePill
           anchors.fill: parent
+
+          Loader {
+            anchors.centerIn: parent
+            active: Settings.data.bar.showWorkspaceNames 
+            sourceComponent: Component {
+              Text {
+                text: model.name.substring(0,2)
+                font.pointSize: Style.fontSizeXS * scaling
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.Wrap
+              }
+            }
+          }
+
           radius: {
             if (model.isFocused)
               return Math.round(12 * scaling)
